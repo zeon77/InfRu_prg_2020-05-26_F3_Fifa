@@ -17,6 +17,9 @@ namespace FIFAvilagranglista
 
             //3.
             Console.WriteLine($"3. feladat: A világranglistán {csapatok.Count} csapat szerepel");
+
+            //4. feladat
+            Console.WriteLine($"4. feladat: A csapatok átlagos pontszáma: {csapatok.Average(x => x.Pontszám):0.00} pont");
         }
     }
 }
