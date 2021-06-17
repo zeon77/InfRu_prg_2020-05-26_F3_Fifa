@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
+using System.Text;
 
 namespace FIFAvilagranglista
 {
@@ -9,7 +10,11 @@ namespace FIFAvilagranglista
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //2.
+            List<Csapat> csapatok = new List<Csapat>();
+            foreach (var sor in File.ReadAllLines("fifa.txt", Encoding.UTF8).Skip(1))
+                csapatok.Add(new Csapat(sor));
+
         }
     }
 }
