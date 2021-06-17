@@ -18,15 +18,19 @@ namespace FIFAvilagranglista
             //3.
             Console.WriteLine($"3. feladat: A világranglistán {csapatok.Count} csapat szerepel");
 
-            //4. feladat
+            //4.
             Console.WriteLine($"4. feladat: A csapatok átlagos pontszáma: {csapatok.Average(x => x.Pontszám):0.00} pont");
 
-            //5. feladat
+            //5.
             Csapat cs = csapatok.OrderBy(x => x.Változás).Last();
             Console.WriteLine($"5. feladat: A legtöbbet javító csapat:");
             Console.WriteLine($"\t Helyezés: {cs.Helyezés}");
             Console.WriteLine($"\t Csapat: {cs.Név}");
             Console.WriteLine($"\t Pontszám: {cs.Pontszám}");
+
+            //6.
+            bool MO = csapatok.Any(x => x.Név == "Magyarország");
+            Console.WriteLine($"6. feladat: A csapatok között {(MO ? "van" : "nincs")} Magyarország.");
         }
     }
 }
