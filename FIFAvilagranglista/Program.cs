@@ -31,6 +31,14 @@ namespace FIFAvilagranglista
             //6.
             bool MO = csapatok.Any(x => x.Név == "Magyarország");
             Console.WriteLine($"6. feladat: A csapatok között {(MO ? "van" : "nincs")} Magyarország.");
+
+            //7. feladat
+            Console.WriteLine($"7. feladat: Statisztika");
+            csapatok
+                .GroupBy(x => x.Változás)
+                .Select(group => new { Változás = group.Key, CsapatokSzáma = group.Count() })
+                .Where(x => x.CsapatokSzáma > 1)
+                .ToList().ForEach(x => Console.WriteLine($"\t{x.Változás} helyet változott: {x.CsapatokSzáma} csapat"));
         }
     }
 }
