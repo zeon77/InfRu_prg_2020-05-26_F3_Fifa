@@ -15,6 +15,8 @@ namespace FIFAvilagranglista
             foreach (var sor in File.ReadAllLines("fifa.txt", Encoding.UTF8).Skip(1))
                 csapatok.Add(new Csapat(sor));
 
+            //3.
+            Console.WriteLine($"3. feladat: A világranglistán {csapatok.Count} csapat szerepel");
         }
     }
 }
