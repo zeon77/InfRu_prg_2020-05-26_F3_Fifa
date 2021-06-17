@@ -20,6 +20,13 @@ namespace FIFAvilagranglista
 
             //4. feladat
             Console.WriteLine($"4. feladat: A csapatok átlagos pontszáma: {csapatok.Average(x => x.Pontszám):0.00} pont");
+
+            //5. feladat
+            Csapat cs = csapatok.OrderBy(x => x.Változás).Last();
+            Console.WriteLine($"5. feladat: A legtöbbet javító csapat:");
+            Console.WriteLine($"\t Helyezés: {cs.Helyezés}");
+            Console.WriteLine($"\t Csapat: {cs.Név}");
+            Console.WriteLine($"\t Pontszám: {cs.Pontszám}");
         }
     }
 }
